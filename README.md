@@ -13,8 +13,8 @@ According to Lauren Cutlip, business development and outreach manager at the Rec
 
 
 <br/>Stage 1 counts are as follows: 
-    *discarded clothing (143)
-    *food waste(184)
+    -discarded clothing (143)
+    -food waste(184)
     *plastic bags (283)
     *scrap metal pieces (123)
     *wood scraps (288)
