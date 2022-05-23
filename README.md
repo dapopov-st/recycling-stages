@@ -15,8 +15,8 @@ According to Lauren Cutlip, business development and outreach manager at the Rec
 <br/>
 Stage 1 counts are as follows: 
     <br/>discarded clothing (143)
-    <br/>Stage 1 counts are as follows: 143 images of discarded clothing, food waste(184)
-    <br/>Stage 1 counts are as follows: 143 images of discarded clothing, plastic bags (283)
-    <br/>Stage 1 counts are as follows: 143 images of discarded clothing, scrap metal pieces (123)
-    <br/>Stage 1 counts are as follows: 143 images of discarded clothing, wood scraps (288)
-    <br/>Stage 1 counts are as follows: 143 images of discarded clothing, recyclables no scrap (492 images from stage 2 recyclables, roughly the same amount from each category in stage 2)
+    <br/>food waste(184)
+    <br/>plastic bags (283)
+    <br/>scrap metal pieces (123)
+    <br/>wood scraps (288)
+    <br/>recyclables no scrap (492 images from stage 2 recyclables, roughly the same amount from each category in stage 2)
