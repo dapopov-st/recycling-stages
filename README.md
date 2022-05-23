@@ -22,7 +22,7 @@ Stage 1 counts are as follows:
     <br/>scrap metal pieces (123)
     <br/>wood scraps (288)
     <br/>recyclables no scrap (492 images from stage 2 recyclables, roughly the same amount from each category in stage 2)
-<br/>
+<br/><br/>
 Stage 2 counts are as follows: 
     <br/>aluminium can (247)
     <br/>cardboard(403) <-From Trasnhet
