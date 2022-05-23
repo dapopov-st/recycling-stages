@@ -12,9 +12,10 @@ According to Lauren Cutlip, business development and outreach manager at the Rec
 <br/><br/> The models are deployed with Gradio on Huggingface at https://huggingface.co/spaces/dpv/Stage1Recycling and https://huggingface.co/spaces/dpv/Stage2Recycling
 
 
-<br/>Stage 1 counts are as follows: 
-    -discarded clothing (143)
-    -food waste(184)
+<br/>
+Markup: Stage 1 counts are as follows: 
+    *discarded clothing (143)
+    *food waste(184)
     *plastic bags (283)
     *scrap metal pieces (123)
     *wood scraps (288)
