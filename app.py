@@ -1,0 +1,103 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "af9bff8c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from fastai.vision.all import*\n",
+    "import gradio as gr\n",
+    "learn1 = load_learner('stage1.pkl')\n",
+    "learn2 = load_learner('stage2.pkl')\n",
+    "demo = gr.Blocks()\n",
+    "\n",
+    "categories1 = 'discarded clothing', 'food waste', 'plastic bags', 'recyc_no_scrap', 'scrap metal piece', 'wood scraps'\n",
+    "categories2 = 'HDPE container', 'PET plastic bottle', 'aluminium can', 'cardboard', 'glass', 'paper2D', 'paper3D', 'steel and tin cans'\n",
+    "categories1_str = \"Stage 1 categories: \"+\", \".join(categories1)\n",
+    "categories2_str = \"Stage 2 categories: \"+\", \".join(categories2)\n",
+    "placeholder_=\"Stages 1 and 2 of the Recycling Process\\n\"+categories1_str+\"\\n\"+categories2_str\n",
+    "\n",
+    "image1 = gr.inputs.Image(shape=(192,192))\n",
+    "label1 = gr.outputs.Label()\n",
+    "examples1 = ['stage1ex1_t.jpeg', 'stage1ex2_t.jpeg','stage1ex3_t.jpeg','stage1ex4_t.jpeg', 'stage1ex5_t.jpeg','stage1ex6_t.jpeg']\n",
+    "\n",
+    "\n",
+    "image2 = gr.inputs.Image(shape=(192,192))\n",
+    "label2 = gr.outputs.Label()\n",
+    "examples2 = ['stage2ex1_t.jpeg', 'stage2ex2_t.jpeg','stage2ex3_t.jpeg', 'stage2ex4_t.jpeg','stage2ex5_t.jpeg',\n",
+    "            'stage2ex6_tt.jpeg','stage2ex7_tt.jpeg','stage2ex8_t.jpeg']\n",
+    "\n",
+    "\n",
+    "def classify_stage1(img):\n",
+    "    pred, idx, probs = learn1.predict(img)\n",
+    "    return dict(zip(categories1, map(float,probs)))\n",
+    "def classify_stage2(img):\n",
+    "    pred, idx, probs = learn2.predict(img)\n",
+    "    return dict(zip(categories2, map(float,probs)))\n",
+    "\n",
+    "\n",
+    "\n",
+    "with demo:\n",
+    "    gr.Markdown(placeholder_)\n",
+    "    with gr.Tabs():\n",
+    "        with gr.TabItem(\"Stage 1\"):\n",
+    "            with gr.Row():\n",
+    "                nxt1 = random.choice(examples1)\n",
+    "                stage1_input = gr.Image(nxt1)\n",
+    "                stage1_output = gr.Label()\n",
+    "                \n",
+    "            stage1_button = gr.Button(\"Categorize Stage 1 Item\")\n",
+    "         \n",
+    "         \n",
+    "            \n",
+    "        with gr.TabItem(\"Stage2\"):\n",
+    "            with gr.Row():\n",
+    "                stage2_input = gr.Image(random.choice(examples2))\n",
+    "                stage2_output = gr.Label()\n",
+    "          \n",
+    "            stage2_button = gr.Button(\"Categorize Stage 2 Item\")\n",
+    "\n",
+    "    stage1_button.click(classify_stage1, inputs=stage1_input, outputs=stage1_output)#, examples = examples1)\n",
+    "    stage2_button.click(classify_stage2, inputs=stage2_input, outputs=stage2_output)#, examples = examples2)\n",
+    "\n",
+    "demo.launch()"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.4"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": false,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
