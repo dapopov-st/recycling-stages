@@ -32,3 +32,4 @@ Stage 2 counts are as follows:
     <br/>3D paper (222)
     <br/>PET plastic bottle (274) <-From Trasnhet
     <br/>steel and tin cans (250)
+<br/> The images in the samples used for Gradio+Huggingface deployment are representative of the images found in the data.
