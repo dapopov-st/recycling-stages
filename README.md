@@ -1,4 +1,4 @@
-# Stage 1 and 2 Recycling
+# End-to-end computer vision project to model recycling facility stages
 ## General Outline
 According to Lauren Cutlip, business development and outreach manager at the Recycling & Disposal Solutions of Virginia, there are stages to the recycling process (see https://brightly.eco/recycling-process/).  
 <br/>“When the driver completes their route, they arrive at the [MRF] to be weighed in on the scale before unloading the recyclable materials onto the tip floor,” Cutlip says. “Then a loader operator will scoop the materials and fill a drum feed or hopper where the items are mixed up and brought to the presort belt where staff looks for [non-recyclable] items that could damage equipment or contaminate the end product (including wood, clothing, plastic bags, scrap metal, and food waste).”
